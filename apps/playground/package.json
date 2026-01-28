@@ -1,0 +1,28 @@
+{
+  "name": "@app/playground",
+  "version": "0.0.0",
+  "description": "An open-source toolkit for modeling and visualizing industry chain graphs.",
+  "type": "module",
+  "author": "zhensherlock",
+  "homepage": "https://zhensherlock.github.io/industry-chain-graph",
+  "keywords": [
+    "industry-chain-graph"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/tsconfig": "^0.8.1",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1",
+    "vue-tsc": "^3.2.4"
+  }
+}
