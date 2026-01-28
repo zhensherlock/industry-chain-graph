@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  build:
+    if: github.repository == 'zhensherlock/industry-chain-graph'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: 22
+          npm-token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build Package
+        run: pnpm run build
+
+      - name: Test Package
+        run: pnpm run coverage
+
